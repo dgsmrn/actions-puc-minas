@@ -1,13 +1,13 @@
-name: Exemplo de fluxo de trabalho
+name: Exemplo de fluxo de trabalho # nome do workflow
 
-on:
-  workflow_dispatch:
+on: # qual evento dispara o workflow
+  workflow_dispatch: # fluxo pode ser ativado de forma manual
 
-jobs:
-  acao_inicial_job: 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Imprime Ola
-        run: echo "Ola"
-      - name: Impreme Tchau
-        run: echo "Tchau"
+jobs: # declaração dos jobs
+  acao_inicial_job: # nome do job
+    runs-on: ubuntu-latest # onde será executado, máquina virtual (runner)
+    steps: # declaração dos passos do job
+      - name: Imprime Ola # nome do primeiro passo
+        run: echo "Ola" # execução de um comando, script ou ação
+      - name: Impreme Tchau # nome do segundo passo
+        run: echo "Tchau" # execuão do comando...
